@@ -1,18 +1,17 @@
+//ok
 import { useParams } from "react-router"
-
 import Notice from "../components/Notice"
 import PlanIntro from "../components/PlanIntro"
-
 import duolingoSrc from "../assets/duolingo.jpeg"
-import hkfriendSrc from "../assets/hkfriend.jpeg"
 import microsoftSrc from "../assets/microsoft.jpeg"
 import netflixSrc from "../assets/netflix.jpeg"
 import spotifySrc from "../assets/spotify.jpeg"
 import vipSrc from "../assets/vip.jpeg"
 import youtubeSrc from "../assets/youtube.jpeg"
 
+//contain the name, imageSrc and required text for every product
 const data = {
-  youtube: {
+  Youtube: {
     name: "youtube",
     imageSrc: youtubeSrc,
     introText: [
@@ -39,7 +38,7 @@ const data = {
       "不提供全新Gmail account ，購買時麻煩提供自己想升級的Account"
     ],
   },
-  netflix: {
+  Netflix: {
     name: "netflix",
     imageSrc: netflixSrc,
     introText: [
@@ -63,7 +62,7 @@ const data = {
       "只容許給一位顧客使用"
     ]
   },
-  spotify: {
+  Spotify: {
     name: "spotify",
     imageSrc: spotifySrc,
     introText: [
@@ -86,7 +85,7 @@ const data = {
       "此方案為家庭（Spotify premium family )方案，只容許給一位顧客使用"
     ],
   },
-  duolingo: {
+  Duolingo: {
     name: "duolingo",
     imageSrc: duolingoSrc,
     introText: [
@@ -108,7 +107,7 @@ const data = {
       "此方案為個人（Super Duolingo)方案，只容許給一位顧客使用"
     ]
   },
-  microsoft: {
+  Microsoft: {
     name: "microsoft",
     imageSrc: microsoftSrc,
     introText: [
@@ -129,7 +128,7 @@ const data = {
       "此方案會提供全新帳戶"
     ],
   },
-  vip: {
+  VIP: {
     name: "vip",
     imageSrc: vipSrc,
     introText: [
@@ -161,11 +160,13 @@ const data = {
     ]
   }
 }
+
 const AboutProduct = () => {
+  //get the url params
   const param = useParams()
   const product_name = param.pname
 
-
+  //access the correspoding data
   const choiceData = data[product_name];
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">

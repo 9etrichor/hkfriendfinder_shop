@@ -1,3 +1,4 @@
+//ok
 import React from 'react'
 
 import List from '@mui/material/List';
@@ -6,11 +7,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
+//text in aboutProduct page, notification text, text provided by parent element
 const Notice = ({noticeText}) => {
   const texts = noticeText
 
+  {/* display text by looping the list */}
   const items = texts.map(text => 
-    <ListItem disablePadding>
+    <ListItem disablePadding key={text}>
       <ListItemIcon>
         <PriorityHighIcon />
         <ListItemText secondary={text} />

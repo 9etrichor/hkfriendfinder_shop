@@ -2,6 +2,8 @@
 import HeaderNav from "./components/HeaderNav"
 import Footer from "./components/Footer"
 import AboutProduct from "./pages/AboutProduct"
+import PaymentDetail from "./pages/PaymentDetail"
+
 
 //import pages
 import Home from "./pages/Home"
@@ -21,6 +23,7 @@ function App() {
         <Route path="aboutus" element={<Aboutus />} />
         <Route path="commonqa" element={<CommonQA />} />
         <Route path="payment" element={<Payment />} />
+        <Route path="payment/:paymethod" element={<PaymentDetail />} />
         <Route path="product/:pname" element={<AboutProduct />} />
       </Routes>
       <Footer />
