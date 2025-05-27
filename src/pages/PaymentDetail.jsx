@@ -31,11 +31,11 @@ const PaymentDetail = () => {
   const pay_method = param.paymethod
   const data = paymentData[pay_method]
   return (
-    <div>
+    <div className='bg-gray-800 text-white text-4xl pl-[10vw] py-16'>
       {data.texts.map(text => 
-        <h3>{text}</h3>
+        <h3 className='mb-8'>{text}</h3>
       )}
-      <img src={data.imgSrc} alt="" />
+      <img className='min-h-72 h-[50vh] w-auto' src={data.imgSrc} alt="" />
     </div>
   )
 }

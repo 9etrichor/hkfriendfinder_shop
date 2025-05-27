@@ -1,5 +1,3 @@
-//ok
-import React from 'react'
 import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
@@ -23,7 +21,7 @@ const Header = () => {
   return (
     //make the header stick on top and not cover the content below
     <div className='fixed top-0 left-0 z-50 w-full'>
-    <div className='flex justify-between px-[10vw] py-5'>
+    <div className='flex justify-between px-[10vw] py-5 bg-black text-white'>
 
       {/* left side icon and shop name */}
       <div className='flex items-top h-full '>
@@ -49,9 +47,8 @@ const Header = () => {
           aria-haspopup='true'
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
-          className='bg-black text-black'
           >
-          <MenuIcon />
+          <MenuIcon className='text-white' />
         </IconButton>
 
         <Menu
