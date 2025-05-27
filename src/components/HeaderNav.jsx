@@ -26,7 +26,7 @@ const Header = () => {
     <div className='flex justify-between px-[10vw] py-5'>
 
       {/* left side icon and shop name */}
-      <div className='flex items-center'>
+      <div className='flex items-top h-full '>
         <Avatar src={hkfriend} />
         <p className='text-2xl font-bold'>
           <Link to="/home">hkfriendfinder</Link>

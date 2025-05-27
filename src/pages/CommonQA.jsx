@@ -4,7 +4,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Typography from '@mui/material/Typography';
+import NavDisplay from '../components/NavDisplay';
 
 //the question and answer data
 const qAndA = [
@@ -59,9 +59,13 @@ const accordions = qAndA.map(qa =>
 
 const CommonQA = () => {
   return (
-    <div className='max-w-[60vw] m-auto'>
-      {accordions}
+    <div className='bg-gray-800'>
+      <NavDisplay texts={"常見問題"} />
+      <div className='max-w-[60vw] py-16 m-auto'>
+        {accordions}
+      </div>
     </div>
+
   )
 }
 
