@@ -15,9 +15,9 @@ import { Routes, Route } from "react-router"
 
 function App() {
   return (
-    <div className="pt-16">
+    <div className="px-0 pt-20  box-border">
       <HeaderNav />
-      <Routes>
+      <Routes className="w-full">
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="aboutus" element={<Aboutus />} />

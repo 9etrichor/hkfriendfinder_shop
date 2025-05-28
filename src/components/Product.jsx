@@ -29,17 +29,14 @@ const Product = ({money, name, imgSrc}) => {
   //make use of mui card component
   return (
     <Card sx={{ minWidth: 275}} className='shadow-sm  w-1/5 '>
-      <CardHeader title={name} />
+      <Link to={link}>
+      <CardHeader title={name + money} />
 
       <CardMedia
         className=' w-auto'
         component="img"
         image={imgSrc}
       />
-
-      <CardContent className='font-light'>
-        {money}
-      </CardContent>
 
       <CardActions className='flex justify-end'>
         <ThemeProvider theme={theme} >
@@ -50,6 +47,7 @@ const Product = ({money, name, imgSrc}) => {
           </Link>
         </ThemeProvider>
       </CardActions>
+      </Link>
     </Card>
   )
 }

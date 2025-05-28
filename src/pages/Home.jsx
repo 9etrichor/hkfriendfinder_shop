@@ -13,16 +13,16 @@ import youtubeSrc from "../assets/youtube.jpeg"
 const Home = () => {
   return (
     <div>
-      <NavDisplay texts="HKfriendfinder合租家庭店
+      <NavDisplay texts="HKFriendsFinder合租家庭店
 聆聽無廣告音樂,觀看高畫質影片,為什麼不嘗試更划算的選擇呢?" />
 
-      <div className='flex flex-wrap justify-center md:justify-start  gap-8 px-[10%] bg-gray-800 py-8'>
-        <Product money="每個月約$30" name="VIP" imgSrc={vipSrc}/>
-        <Product money="每個月約$18.2" name="Youtube" imgSrc={youtubeSrc}/>
-        <Product money="每個月約$10.7" name="Duolingo" imgSrc={duolingoSrc}/>
+      <div className='flex flex-wrap justify-center md:justify-start  gap-8 w-full px-[10%] bg-gray-800 py-8'>
+        <Product money=":$30/month" name="VIP" imgSrc={vipSrc}/>
+        <Product money=":$18.2/month" name="Youtube" imgSrc={youtubeSrc}/>
+        <Product money=":$10.7/month" name="Duolingo" imgSrc={duolingoSrc}/>
         <Product money="永久賬號$128" name="Microsoft" imgSrc={microsoftSrc}/>
-        <Product money="每個月約$32.4" name="Netflix" imgSrc={netflixSrc}/>
-        <Product money="每個月$19" name="Spotify" imgSrc={spotifySrc}/>
+        <Product money=":$32.4/month" name="Netflix" imgSrc={netflixSrc}/>
+        <Product money=":$19/month" name="Spotify" imgSrc={spotifySrc}/>
       </div>
     </div>
   )

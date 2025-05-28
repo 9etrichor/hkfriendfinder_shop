@@ -20,16 +20,16 @@ const Header = () => {
 
   return (
     //make the header stick on top and not cover the content below
-    <div className='fixed top-0 left-0 z-50 w-full'>
-    <div className='flex justify-between px-[10vw] py-5 bg-black text-white'>
+    <div className='fixed top-0 left-0 z-50 w-full '>
+    <div className='flex justify-between items-center px-[10vw] py-3  bg-black text-white'>
 
       {/* left side icon and shop name */}
-      <div className='flex items-top h-full '>
-        <Avatar src={hkfriend} />
+      <Link to="/home" className='flex items-center gap-2 h-full '>
+        <Avatar src={hkfriend} className="" sx={{ width: 56, height: 56 }} />
         <p className='text-2xl font-bold'>
-          <Link to="/home">hkfriendfinder</Link>
+          HKFriendsFinder
         </p>
-      </div>
+      </Link>
 
       {/* right side navigation for PC screen */}
       <div className='font-light hidden md:block'>

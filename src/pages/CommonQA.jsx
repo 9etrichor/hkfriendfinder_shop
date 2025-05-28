@@ -61,7 +61,7 @@ const CommonQA = () => {
   return (
     <div className='bg-gray-800'>
       <NavDisplay texts={"常見問題"} />
-      <div className='max-w-[60vw] py-16 m-auto'>
+      <div className='md:max-w-[70vw] max-w-[80vw] py-16 m-auto'>
         {accordions}
       </div>
     </div>
