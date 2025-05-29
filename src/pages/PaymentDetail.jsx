@@ -35,7 +35,10 @@ const PaymentDetail = () => {
       {data.texts.map(text => 
         <h3 className='mb-8'>{text}</h3>
       )}
-      <img className='min-h-72 h-[50vh] w-auto' src={data.imgSrc} alt="" />
+      {data.imgSrc ? <img className='min-h-72 h-[50vh] w-auto' src={data.imgSrc} alt="" /> : null}
+
+      <h4 className='pt-16 text-3xl max-w-2/3 md:max-w-1/3 font-light'>付款後請連截圖轉賬憑據並傳送至本店Whatsapp客服</h4>
+      <h4 className='py-16 text-3xl max-w-2/3 md:max-w-1/3 font-light'>PayPal(+5%)行政費，Fps/Alipayhk/Payme(+0%)</h4>
     </div>
   )
 }

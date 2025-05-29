@@ -7,7 +7,7 @@ const PayImage = ({payMethod, imgSrc}) => {
   //get the click link
   const link = "/payment/" + payMethod
   return (
-    <Link className='bg-white shadow-lg min-w-3xs w-[40vw] py-8 flex items-center justify-center' to={link}>
+    <Link className='bg-white shadow-lg min-w-3xs w-[40vw] h-40 py-8 flex items-center justify-center' to={link}>
         <img src={imgSrc} className='w-32' /> 
     </Link>
   )

@@ -1,7 +1,6 @@
 //ok
 import { Link } from 'react-router';
 import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardActions from '@mui/material/CardActions';
@@ -14,23 +13,13 @@ const Product = ({money, name, imgSrc}) => {
   //the click link in button
   const link = "/product/" + name
   
-  //mui change button color
-  const theme = createTheme({
-    palette:{
-      newPri:{
-        main: "#FAAD9D",
-        light: "#F1A798",
-        dark: "#8B6058",
-        contrastText: "#193228"
-      }
-    }
-  })
-
   //make use of mui card component
   return (
     <Card sx={{ minWidth: 275}} className='shadow-sm  w-1/5 '>
       <Link to={link}>
-      <CardHeader title={name + money} />
+      <CardContent className='text-2xl font-semibold'>
+        {name + money}
+      </CardContent>
 
       <CardMedia
         className=' w-auto'
@@ -38,15 +27,6 @@ const Product = ({money, name, imgSrc}) => {
         image={imgSrc}
       />
 
-      <CardActions className='flex justify-end'>
-        <ThemeProvider theme={theme} >
-          <Link to={link} >
-            <Button variant='contained' endIcon={<LocalMallIcon />} color='newPri'>
-              Buy
-            </Button>
-          </Link>
-        </ThemeProvider>
-      </CardActions>
       </Link>
     </Card>
   )
